@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        app:title="General" >
+
+        <SwitchPreferenceCompat
+            app:key="enable_alert"
+            app:title="Alert is enabled"
+            app:defaultValue="true"/>
+
+        <SwitchPreferenceCompat
+            app:key="launch_on_boot"
+            app:title="Launch on Boot"
+            app:defaultValue="true"
+            app:isPreferenceVisible="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="Notifications" >
+
+        <SwitchPreferenceCompat
+            app:key="ringtone"
+            app:title="Enable Ringtone"
+            app:defaultValue="true"/>
+
+        <SwitchPreferenceCompat
+            app:key="vibrate"
+            app:title="Enable Vibration"
+            app:defaultValue="true"/>
+
+        <SwitchPreferenceCompat
+            app:key="disableDoNotDisturb"
+            app:title="Modifications in Sound Settings"
+            app:defaultValue="false"/>
+
+        <Preference
+            app:key="CustomRingtone"
+            app:title="Change Ringtone" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="Alert Options" >
+
+        <EditTextPreference
+            app:key="alarm_number"
+            app:title="Alarming Number"
+            app:icon="@android:drawable/ic_dialog_alert"
+            app:isPreferenceVisible="false"/>
+
+        <Preference
+            app:key="pick_contact"
+            app:title="Alarming Contact"
+            app:icon="@android:drawable/ic_dialog_alert"/>
+
+        <ListPreference
+            android:key="list_AdressParser"
+            android:title="Select Addressparser"
+            app:useSimpleSummaryProvider="true"
+            android:entries="@array/AdressParser"
+            android:entryValues="@array/AdressParser"
+            android:defaultValue="@string/DefaultParser"/>
+
+        <SwitchPreferenceCompat
+            app:key="showMap_button"
+            app:title="Enable Map on Button Ack."
+            app:defaultValue="true"
+            app:icon="@android:drawable/ic_dialog_map" />
+
+        <EditTextPreference
+            app:key="city"
+            app:title="Your City"
+            app:summary="For better Map performance you can Enter your City Name here."
+            app:icon="@android:drawable/ic_menu_mylocation" />
+
+        <SwitchPreferenceCompat
+            app:key="unlock_screen"
+            app:title="Unlock Lockscreen"
+            app:summary="Here you can disable the Lockscreen unlock."
+            app:defaultValue="true"
+            app:icon="@android:drawable/ic_lock_idle_lock" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="Google Maps Integration" >
+        <SwitchPreferenceCompat
+            app:key="useInternalMap"
+            app:title="Use Google Maps integration"
+            app:defaultValue="true"/>
+
+        <SwitchPreferenceCompat
+            app:key="useSatelliteMap"
+            app:title="Use Satellite Hybrid map"
+            app:defaultValue="false"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="Additional Information" >
+
+    <Preference
+        app:key="infoLockscreen"
+        app:title="Lockscreen Information"
+        app:summary="Click for more information." />
+
+        <Preference
+            app:key="infoAlarm"
+            app:title="Audio Information"
+            app:summary="Click for more information." />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="Test and Debug" >
+
+        <EditTextPreference
+            app:key="alarm_number_debug"
+            app:title="Debug alarming Number"
+            app:icon="@android:drawable/ic_dialog_alert" />
+
+    </PreferenceCategory>
+
+    <EditTextPreference
+        app:key="last_alert"
+        app:isPreferenceVisible="false" />
+
+</PreferenceScreen>
